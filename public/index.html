@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sailor — Weekly Brief</title>
+<meta name="description" content="Eleven geopolitical and geo-economic situations, scored weekly against their own normal range. Updated automatically from public event data.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap">
+<style>
+  :root{
+    --paper:#F6F6F4; --panel:#FFFFFF; --ink:#15191F; --ink-2:#4C5661; --ink-3:#7A838D;
+    --rule:#DEE0DC; --rule-2:#EAEBE8; --track:#EEF1F5;
+    --l1:#1C6547; --l1b:#8FCFB2; --l2:#9A6B1F; --l2b:#F0C46A;
+    --l3:#B54708; --l3b:#F0A173; --l4:#98292B; --l4b:#E38A89;
+    --serif:"Source Serif 4", Georgia, "Times New Roman", serif;
+    --mono:"IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+    color-scheme: dark;
+    --paper:#13161A; --panel:#191D22; --ink:#E9EBE7; --ink-2:#AEB6BE; --ink-3:#7E8791;
+    --rule:#2B3138; --rule-2:#232930; --track:#232930;
+    --l1:#5FBF92; --l1b:#2E6B52; --l2:#D6A952; --l2b:#6B5423;
+    --l3:#E8935C; --l3b:#7A4520; --l4:#E1706F; --l4b:#7A2E2E;
+  }}
+  :root[data-theme="dark"]{
+    color-scheme: dark;
+    --paper:#13161A; --panel:#191D22; --ink:#E9EBE7; --ink-2:#AEB6BE; --ink-3:#7E8791;
+    --rule:#2B3138; --rule-2:#232930; --track:#232930;
+    --l1:#5FBF92; --l1b:#2E6B52; --l2:#D6A952; --l2b:#6B5423;
+    --l3:#E8935C; --l3b:#7A4520; --l4:#E1706F; --l4b:#7A2E2E;
+  }
+  *{ box-sizing:border-box; }
+  body{ margin:0; background:var(--paper); color:var(--ink); font-family:var(--serif);
+    font-size:16px; line-height:1.6; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:880px; margin:0 auto; padding-inline:20px; padding-block:40px 80px; }
+
+  header{ border-bottom:2px solid var(--ink); padding-bottom:18px; }
+  .brand{ font-family:var(--mono); font-size:13px; font-weight:700; letter-spacing:.22em;
+    text-transform:uppercase; }
+  h1{ font-size:clamp(28px,5vw,38px); line-height:1.12; margin:12px 0 0; letter-spacing:-.01em; }
+  .sub{ color:var(--ink-2); margin:10px 0 0; max-width:60ch; }
+  .stamp{ display:flex; gap:10px 26px; flex-wrap:wrap; margin-top:18px; font-family:var(--mono); font-size:12px; }
+  .stamp span{ color:var(--ink-3); }
+  .stamp b{ font-weight:600; }
+  .auto{ display:inline-block; font-family:var(--mono); font-size:10px; font-weight:700;
+    letter-spacing:.06em; text-transform:uppercase; color:var(--l1); border:1px solid var(--l1b);
+    border-radius:3px; padding:2px 7px; }
+
+  h2{ font-family:var(--mono); font-size:12px; font-weight:600; letter-spacing:.1em;
+    text-transform:uppercase; color:var(--ink-3); margin:48px 0 6px;
+    padding-bottom:8px; border-bottom:1px solid var(--rule); }
+  .hint{ color:var(--ink-2); font-size:14.5px; margin:10px 0 18px; max-width:66ch; }
+
+  .row{ display:grid; grid-template-columns:1fr 240px 74px 64px; gap:14px; align-items:center;
+    padding:11px 0; border-bottom:1px solid var(--rule-2); }
+  .row:last-child{ border-bottom:none; }
+  .nm{ font-size:15px; font-weight:600; }
+  .nm small{ display:block; font-weight:400; font-size:12.5px; color:var(--ink-3); margin-top:2px; }
+  .bar{ position:relative; height:18px; background:var(--track); border-radius:4px; overflow:hidden; }
+  .bar i{ position:absolute; inset-block:0; left:0; border-radius:4px; }
+  .bar u{ position:absolute; inset-block:-2px; width:1px; background:var(--rule); }
+  .lvl{ font-family:var(--mono); font-size:11px; font-weight:700; letter-spacing:.04em;
+    text-transform:uppercase; text-align:right; }
+  .val{ font-family:var(--mono); font-size:14px; font-weight:600; text-align:right;
+    font-variant-numeric:tabular-nums; }
+  .val em{ display:block; font-style:normal; font-size:10.5px; font-weight:500; color:var(--ink-3); }
+  @media (max-width:640px){
+    .row{ grid-template-columns:1fr 68px; gap:6px 12px; }
+    .bar{ grid-column:1 / -1; order:3; }
+    .lvl{ text-align:left; order:4; grid-column:1 / -1; }
+  }
+
+  .movers{ display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:14px; }
+  .mv{ background:var(--panel); border:1px solid var(--rule); border-left:3px solid var(--rule);
+    border-radius:2px; padding:14px 16px; }
+  .mv .t{ font-family:var(--mono); font-size:10px; font-weight:700; letter-spacing:.07em;
+    text-transform:uppercase; color:var(--ink-3); }
+  .mv .n{ font-size:16px; font-weight:600; margin-top:5px; line-height:1.3; }
+  .mv .d{ font-family:var(--mono); font-size:13px; font-weight:600; margin-top:6px; }
+  .spark{ display:flex; align-items:flex-end; gap:1.5px; height:30px; margin-top:10px; }
+  .spark div{ flex:1; border-radius:1px 1px 0 0; min-height:2px; }
+
+  .note{ font-size:14px; color:var(--ink-2); max-width:70ch; }
+  .note b{ color:var(--ink); }
+  ul.plain{ padding-left:20px; margin:10px 0 0; }
+  ul.plain li{ margin-bottom:7px; font-size:14px; color:var(--ink-2); max-width:68ch; }
+  footer{ margin-top:56px; padding-top:18px; border-top:1px solid var(--rule);
+    font-family:var(--mono); font-size:11px; color:var(--ink-3); line-height:1.9; }
+  a{ color:inherit; }
+  :focus-visible{ outline:2px solid var(--l3); outline-offset:2px; }
+  .err{ background:var(--panel); border:1px solid var(--rule); border-radius:2px;
+    padding:20px; color:var(--ink-2); font-family:var(--mono); font-size:13px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="brand">Sailor</div>
+    <h1>Weekly brief</h1>
+    <p class="sub">Eleven geopolitical and geo-economic situations, each scored against its own normal range rather than against each other. Free, and updated without anyone touching it.</p>
+    <div class="stamp" id="stamp"></div>
+  </header>
+
+  <h2>The board</h2>
+  <p class="hint">Distance from each situation's own six-month baseline, in standard deviations. Ticks mark Watch, Alert and Critical.</p>
+  <div id="board"><div class="err">Loading…</div></div>
+
+  <h2>Biggest movers</h2>
+  <p class="hint">Change against the previous four weeks. Movement matters more than level — a situation that is always tense tells you nothing by being tense again.</p>
+  <div class="movers" id="movers"></div>
+
+  <h2>How to read this</h2>
+  <p class="note">Counts of conflict, coercion, sanction and military-coded events between a named pair of actors, expressed per 100,000 global events, plus average tone. Each measure is compared with that situation's own 26-week rolling baseline; the composite is the mean of those standardised scores. <b>Normal</b> below 1σ, <b>Watch</b> 1–2σ, <b>Alert</b> 2–3σ, <b>Critical</b> at 3σ and above.</p>
+  <ul class="plain">
+    <li><b>Levels are computed. The words are not.</b> This page reports where each situation sits. It does not tell you what happened — automated summarisation is on the roadmap, and we would rather say so than generate something we cannot source.</li>
+    <li><b>Eleven situations, not the world.</b> Anything outside these eleven actor pairs is invisible here.</li>
+    <li><b>Thin weeks are discarded, not scored.</b> When global event volume falls below half its trailing median the denominator collapses and every rate inflates. Those weeks are withheld rather than reported as escalation.</li>
+    <li><b>Relative, not absolute.</b> Alert means unusual for that situation, not dangerous in itself.</li>
+  </ul>
+
+  <footer>
+    Sailor · non-financial risk early warning<br>
+    Built from GDELT 1.0 event files. Thresholds frozen 2026-09-23.<br>
+    <span id="foot"></span>
+  </footer>
+
+</div>
+
+<script>
+const LV = {
+  1:{n:"Normal",   fg:"var(--l1)", bar:"var(--l1b)"},
+  2:{n:"Watch",    fg:"var(--l2)", bar:"var(--l2b)"},
+  3:{n:"Alert",    fg:"var(--l3)", bar:"var(--l3b)"},
+  4:{n:"Critical", fg:"var(--l4)", bar:"var(--l4b)"}
+};
+const lvOf = c => c >= 3 ? 4 : c >= 2 ? 3 : c >= 1 ? 2 : 1;
+const el = (t, cls) => { const e = document.createElement(t); if (cls) e.className = cls; return e; };
+
+function widthFor(c){ return Math.max(2, Math.min(100, (c + 1) / 4 * 100)); }
+
+function renderBoard(d){
+  const host = document.getElementById("board");
+  host.textContent = "";
+  if (!d.board.length){ host.append(Object.assign(el("div","err"), {textContent:"No situation has enough history yet."})); return; }
+  d.board.forEach(r => {
+    const row = el("div","row");
+    const nm = el("div","nm");
+    nm.textContent = r.title.replace(/\s*\(.*\)$/, "");
+    const sm = el("small"); sm.textContent = r.group === "military" ? "military" : "geo-economic";
+    nm.append(sm);
+
+    const bar = el("div","bar");
+    const fill = el("i");
+    fill.style.width = widthFor(r.composite) + "%";
+    fill.style.background = LV[r.level].bar;
+    bar.append(fill);
+    [1,2,3].forEach(t => { const u = el("u"); u.style.left = ((t + 1) / 4 * 100) + "%"; bar.append(u); });
+
+    const lv = el("div","lvl");
+    lv.textContent = r.level_name;
+    lv.style.color = LV[r.level].fg;
+
+    const v = el("div","val");
+    v.textContent = (r.composite >= 0 ? "+" : "") + r.composite.toFixed(2);
+    if (r.change !== null){
+      const em = el("em");
+      em.textContent = (r.change >= 0 ? "+" : "") + r.change.toFixed(2) + " vs 4wk";
+      v.append(em);
+    }
+    row.append(nm, bar, lv, v);
+    host.append(row);
+  });
+}
+
+function renderMovers(d){
+  const host = document.getElementById("movers");
+  host.textContent = "";
+  const top = d.board.filter(r => r.change !== null)
+    .sort((a, b) => Math.abs(b.change) - Math.abs(a.change)).slice(0, 3);
+  if (!top.length){ host.append(Object.assign(el("div","err"), {textContent:"Not enough weeks yet to measure movement."})); return; }
+  top.forEach(r => {
+    const c = el("div","mv");
+    c.style.borderLeftColor = LV[r.level].fg;
+    const t = el("div","t"); t.textContent = r.level_name + " · week of " + r.week;
+    const n = el("div","n"); n.textContent = r.title.replace(/\s*\(.*\)$/, "");
+    const dd = el("div","d");
+    dd.textContent = (r.change >= 0 ? "▲ +" : "▼ ") + r.change.toFixed(2) + " against the previous four weeks";
+    dd.style.color = r.change >= 0 ? "var(--l3)" : "var(--l1)";
+    c.append(t, n, dd);
+
+    const hist = (d.history[r.case] || []).filter(h => h.c !== null);
+    if (hist.length > 3){
+      const sp = el("div","spark");
+      const lo = Math.min(...hist.map(h => h.c)), hi = Math.max(...hist.map(h => h.c));
+      hist.forEach(h => {
+        const b = el("div");
+        b.style.height = (hi === lo ? 50 : ((h.c - lo) / (hi - lo)) * 92 + 8) + "%";
+        b.style.background = LV[lvOf(h.c)].bar;
+        sp.append(b);
+      });
+      c.append(sp);
+    }
+    host.append(c);
+  });
+}
+
+fetch("data/brief.json?v=" + Date.now())
+  .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+  .then(d => {
+    const s = document.getElementById("stamp");
+    s.innerHTML =
+      '<span class="auto">Updated automatically</span>' +
+      '<div><span>Week of</span> <b>' + d.week_of + '</b></div>' +
+      '<div><span>Data through</span> <b>' + d.data_through + '</b></div>' +
+      '<div><span>Generated</span> <b>' + d.generated_utc.replace("T", " ").replace("Z", " UTC") + '</b></div>';
+    renderBoard(d);
+    renderMovers(d);
+    document.getElementById("foot").textContent =
+      d.days_stored + " days of event data stored · " +
+      (d.suppressed_cases ? d.suppressed_cases + " situation(s) withheld this week for thin coverage" : "no situation withheld for thin coverage this week");
+  })
+  .catch(e => {
+    document.getElementById("board").innerHTML =
+      '<div class="err">The brief has not been generated yet. Run the <b>Weekly brief</b> workflow once with <b>days = 400</b>, then reload. (' + e.message + ')</div>';
+  });
+</script>
+</body>
+</html>
