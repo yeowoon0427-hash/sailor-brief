@@ -1,0 +1,52 @@
+name: Weekly brief
+
+on:
+  schedule:
+    # 03:00 UTC every Monday = 12:00 Monday in Seoul
+    - cron: "0 3 * * 1"
+  workflow_dispatch:
+    inputs:
+      days:
+        description: "How many days back to look for gaps (use 400 for the first run)"
+        required: false
+        default: "30"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: weekly-brief
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Fetch new days
+        run: python scripts/ingest.py --days ${{ github.event.inputs.days || '30' }}
+
+      - name: Build the brief
+        run: python scripts/build.py
+
+      - name: Commit data
+        run: |
+          git config user.name  "sailor-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add data/agg public/data/brief.json
+          if git diff --staged --quiet; then
+            echo "no change"
+          else
+            git commit -m "brief: data through $(python -c "import json;print(json.load(open('public/data/brief.json'))['data_through'])")"
+            git push
+          fi
+          # Vercel picks the push up and redeploys on its own.
