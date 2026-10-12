@@ -1,138 +1,134 @@
 {
- "generated_utc": "2026-10-05T03:07:49Z",
- "data_through": "2026-10-03",
- "week_of": "2026-09-21",
- "days_stored": 412,
+ "generated_utc": "2026-10-12T10:03:00Z",
+ "data_through": "2026-10-10",
+ "week_of": "2026-09-28",
+ "days_stored": 419,
  "suppressed_cases": 0,
  "board": [
-  {
-   "case": "us_china_tariffs_2025",
-   "title": "US\u2013China tariff war and rare-earth controls (2025)",
-   "group": "geoeconomic",
-   "week": "2026-09-21",
-   "composite": 1.07,
-   "level": 2,
-   "level_name": "Watch",
-   "change": 0.82,
-   "coverage": 1.09
-  },
-  {
-   "case": "us_china_chips_2022",
-   "title": "US semiconductor export controls on China (Oct 2022)",
-   "group": "geoeconomic",
-   "week": "2026-09-21",
-   "composite": 0.84,
-   "level": 1,
-   "level_name": "Normal",
-   "change": 0.69,
-   "coverage": 1.09
-  },
-  {
-   "case": "taiwan_strait",
-   "title": "PLA pressure on Taiwan: Pelosi \u2192 Joint Sword \u2192 Strait Thunder (2022\u20132025)",
-   "group": "military",
-   "week": "2026-09-21",
-   "composite": 0.2,
-   "level": 1,
-   "level_name": "Normal",
-   "change": 0.35,
-   "coverage": 1.09
-  },
-  {
-   "case": "india_pakistan_2025",
-   "title": "India\u2013Pakistan clash after the Pahalgam attack (2025)",
-   "group": "military",
-   "week": "2026-09-21",
-   "composite": -0.08,
-   "level": 1,
-   "level_name": "Normal",
-   "change": 0.29,
-   "coverage": 1.09
-  },
   {
    "case": "north_korea",
    "title": "North Korea's provocations against the US and allies (2022\u20132024)",
    "group": "military",
-   "week": "2026-09-21",
-   "composite": -0.15,
+   "week": "2026-09-28",
+   "composite": 0.67,
    "level": 1,
    "level_name": "Normal",
-   "change": -0.19,
-   "coverage": 1.09
-  },
-  {
-   "case": "russia_ukraine_2022",
-   "title": "Russia's escalation before the invasion of Ukraine (2021\u201322)",
-   "group": "military",
-   "week": "2026-09-21",
-   "composite": -0.16,
-   "level": 1,
-   "level_name": "Normal",
-   "change": -0.24,
-   "coverage": 1.09
-  },
-  {
-   "case": "south_china_sea_ph",
-   "title": "China\u2013Philippines clashes in the South China Sea (2023\u20132024)",
-   "group": "military",
-   "week": "2026-09-21",
-   "composite": -0.2,
-   "level": 1,
-   "level_name": "Normal",
-   "change": 0.07,
-   "coverage": 1.09
-  },
-  {
-   "case": "china_japan_2025",
-   "title": "China\u2013Japan dispute over Takaichi's Taiwan remarks (2025)",
-   "group": "geoeconomic",
-   "week": "2026-09-21",
-   "composite": -0.47,
-   "level": 1,
-   "level_name": "Normal",
-   "change": -0.1,
-   "coverage": 1.09
+   "change": 0.66,
+   "coverage": 1.01
   },
   {
    "case": "thailand_cambodia_2025",
    "title": "Thailand\u2013Cambodia border clashes (2025)",
    "group": "military",
-   "week": "2026-09-21",
-   "composite": -0.63,
+   "week": "2026-09-28",
+   "composite": 0.21,
    "level": 1,
    "level_name": "Normal",
-   "change": -0.16,
-   "coverage": 1.09
+   "change": 0.53,
+   "coverage": 1.01
   },
   {
-   "case": "israel_iran_2025",
-   "title": "Israel\u2013Iran 12-day war (2025)",
+   "case": "india_pakistan_2025",
+   "title": "India\u2013Pakistan clash after the Pahalgam attack (2025)",
    "group": "military",
-   "week": "2026-09-21",
-   "composite": -0.63,
+   "week": "2026-09-28",
+   "composite": 0.01,
    "level": 1,
    "level_name": "Normal",
-   "change": -0.09,
-   "coverage": 1.09
+   "change": 0.19,
+   "coverage": 1.01
+  },
+  {
+   "case": "taiwan_strait",
+   "title": "PLA pressure on Taiwan: Pelosi \u2192 Joint Sword \u2192 Strait Thunder (2022\u20132025)",
+   "group": "military",
+   "week": "2026-09-28",
+   "composite": -0.19,
+   "level": 1,
+   "level_name": "Normal",
+   "change": 0.01,
+   "coverage": 1.01
+  },
+  {
+   "case": "south_china_sea_ph",
+   "title": "China\u2013Philippines clashes in the South China Sea (2023\u20132024)",
+   "group": "military",
+   "week": "2026-09-28",
+   "composite": -0.21,
+   "level": 1,
+   "level_name": "Normal",
+   "change": -0.03,
+   "coverage": 1.01
+  },
+  {
+   "case": "russia_ukraine_2022",
+   "title": "Russia's escalation before the invasion of Ukraine (2021\u201322)",
+   "group": "military",
+   "week": "2026-09-28",
+   "composite": -0.34,
+   "level": 1,
+   "level_name": "Normal",
+   "change": -0.31,
+   "coverage": 1.01
+  },
+  {
+   "case": "us_china_tariffs_2025",
+   "title": "US\u2013China tariff war and rare-earth controls (2025)",
+   "group": "geoeconomic",
+   "week": "2026-09-28",
+   "composite": -0.38,
+   "level": 1,
+   "level_name": "Normal",
+   "change": -0.7,
+   "coverage": 1.01
+  },
+  {
+   "case": "us_china_chips_2022",
+   "title": "US semiconductor export controls on China (Oct 2022)",
+   "group": "geoeconomic",
+   "week": "2026-09-28",
+   "composite": -0.55,
+   "level": 1,
+   "level_name": "Normal",
+   "change": -0.84,
+   "coverage": 1.01
+  },
+  {
+   "case": "china_japan_2025",
+   "title": "China\u2013Japan dispute over Takaichi's Taiwan remarks (2025)",
+   "group": "geoeconomic",
+   "week": "2026-09-28",
+   "composite": -0.58,
+   "level": 1,
+   "level_name": "Normal",
+   "change": -0.2,
+   "coverage": 1.01
   },
   {
    "case": "china_japan_seafood_2023",
    "title": "China bans Japanese seafood over Fukushima water release (2023)",
    "group": "geoeconomic",
-   "week": "2026-09-21",
-   "composite": -0.82,
+   "week": "2026-09-28",
+   "composite": -0.75,
    "level": 1,
    "level_name": "Normal",
-   "change": -0.38,
-   "coverage": 1.09
+   "change": -0.13,
+   "coverage": 1.01
+  },
+  {
+   "case": "israel_iran_2025",
+   "title": "Israel\u2013Iran 12-day war (2025)",
+   "group": "military",
+   "week": "2026-09-28",
+   "composite": -0.77,
+   "level": 1,
+   "level_name": "Normal",
+   "change": -0.26,
+   "coverage": 1.01
   }
  ],
  "history": {
   "taiwan_strait": [
-   {
-    "week": "2026-03-30",
-    "c": -0.63
-   },
    {
     "week": "2026-04-06",
     "c": -0.39
@@ -232,13 +228,13 @@
    {
     "week": "2026-09-21",
     "c": 0.2
+   },
+   {
+    "week": "2026-09-28",
+    "c": -0.19
    }
   ],
   "north_korea": [
-   {
-    "week": "2026-03-30",
-    "c": -0.6
-   },
    {
     "week": "2026-04-06",
     "c": 0.64
@@ -338,13 +334,13 @@
    {
     "week": "2026-09-21",
     "c": -0.15
+   },
+   {
+    "week": "2026-09-28",
+    "c": 0.67
    }
   ],
   "south_china_sea_ph": [
-   {
-    "week": "2026-03-30",
-    "c": -0.56
-   },
    {
     "week": "2026-04-06",
     "c": -0.68
@@ -444,13 +440,13 @@
    {
     "week": "2026-09-21",
     "c": -0.2
+   },
+   {
+    "week": "2026-09-28",
+    "c": -0.21
    }
   ],
   "india_pakistan_2025": [
-   {
-    "week": "2026-03-30",
-    "c": 0.35
-   },
    {
     "week": "2026-04-06",
     "c": 2.23
@@ -550,13 +546,13 @@
    {
     "week": "2026-09-21",
     "c": -0.08
+   },
+   {
+    "week": "2026-09-28",
+    "c": 0.01
    }
   ],
   "thailand_cambodia_2025": [
-   {
-    "week": "2026-03-30",
-    "c": -0.53
-   },
    {
     "week": "2026-04-06",
     "c": -0.39
@@ -656,13 +652,13 @@
    {
     "week": "2026-09-21",
     "c": -0.63
+   },
+   {
+    "week": "2026-09-28",
+    "c": 0.21
    }
   ],
   "israel_iran_2025": [
-   {
-    "week": "2026-03-30",
-    "c": 1.06
-   },
    {
     "week": "2026-04-06",
     "c": 1.18
@@ -762,13 +758,13 @@
    {
     "week": "2026-09-21",
     "c": -0.63
+   },
+   {
+    "week": "2026-09-28",
+    "c": -0.77
    }
   ],
   "russia_ukraine_2022": [
-   {
-    "week": "2026-03-30",
-    "c": -0.63
-   },
    {
     "week": "2026-04-06",
     "c": -0.3
@@ -868,13 +864,13 @@
    {
     "week": "2026-09-21",
     "c": -0.16
+   },
+   {
+    "week": "2026-09-28",
+    "c": -0.34
    }
   ],
   "us_china_chips_2022": [
-   {
-    "week": "2026-03-30",
-    "c": -0.01
-   },
    {
     "week": "2026-04-06",
     "c": -0.55
@@ -974,13 +970,13 @@
    {
     "week": "2026-09-21",
     "c": 0.84
+   },
+   {
+    "week": "2026-09-28",
+    "c": -0.55
    }
   ],
   "china_japan_seafood_2023": [
-   {
-    "week": "2026-03-30",
-    "c": 0.24
-   },
    {
     "week": "2026-04-06",
     "c": -0.26
@@ -1080,13 +1076,13 @@
    {
     "week": "2026-09-21",
     "c": -0.82
+   },
+   {
+    "week": "2026-09-28",
+    "c": -0.75
    }
   ],
   "us_china_tariffs_2025": [
-   {
-    "week": "2026-03-30",
-    "c": -0.35
-   },
    {
     "week": "2026-04-06",
     "c": -0.69
@@ -1186,13 +1182,13 @@
    {
     "week": "2026-09-21",
     "c": 1.07
+   },
+   {
+    "week": "2026-09-28",
+    "c": -0.38
    }
   ],
   "china_japan_2025": [
-   {
-    "week": "2026-03-30",
-    "c": -0.07
-   },
    {
     "week": "2026-04-06",
     "c": -0.65
@@ -1292,6 +1288,10 @@
    {
     "week": "2026-09-21",
     "c": -0.47
+   },
+   {
+    "week": "2026-09-28",
+    "c": -0.58
    }
   ]
  },
